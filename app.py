@@ -15,15 +15,44 @@ Tasks:
 []: find a movie
 []: stop running the program when they type 'q'
 
+{     'name': 'The Matrix',     'director': 'Wachowskis',     'year': '1994' }
+
+
 """
 
 
+list_of_mov = [{
+        'name': 'mov1',
+        'director': 'dir1',
+        'year': 1994
+        },
+        {
+        'name': 'mov2',
+        'director': 'dir1',
+        'year': 1995
+        },
+        {
+        'name': 'mov3',
+        'director': 'dir1',
+        'year': 1996
+        },
+        {
+        'name': 'mov3',
+        'director': 'dir2',
+        'year': 2000
+        }]
+
+
 def add_m():
-    print("add")
+    mov_name = input("enter a name:")
+    dir_name = input("enter a dir name:")
+    when_mov_came = int(input("year of mov (yyyy):"))
+    list_of_mov.append({'name': mov_name, 'director': dir_name, 'year': when_mov_came})
+    print(f"your {mov_name} movie successfully added")
 
 
 def show_m():
-    print("view")
+    print(list_of_mov)
 
 
 def find_m():
